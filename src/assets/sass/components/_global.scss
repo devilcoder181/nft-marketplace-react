@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+    font-size: 17px;
+
+    @media screen and (max-width:991px) {
+        font-size: 14px;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 17px;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 82.5%;
+    min-width: 82.5%;
+    padding: 0 15px;
+    margin: 0 auto;
+}

@@ -1,0 +1,32 @@
+nav{
+    position: relative;
+    display: block;
+    width: auto;
+
+    ul{
+        position: relative;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li{
+            position: relative;
+            display: block;
+            margin: 0 0.75em;
+            a{
+                position: relative;
+                display: block;
+                font-size: var(--sm-text-2);
+                font-weight: 500;
+                color: var(--text-color);
+                transition: all 0.3s ease;
+
+                &:hover{
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}

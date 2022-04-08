@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #00f388;
+    --secondary-color: #999999;
+    --third-color: #1c1f33;
+    --border-color: #f1f1f1;
+    --text-color: rgb(33, 36, 41);
+    --white-color: #fff;
+    --nav-color: rgb(33, 36, 41);
+    --btn-color: rgb(33, 36, 41);
+    --font-family: 'Poppins', 'Almarai', sans-serif;
+    --default-height: 4.5vh;
+    --sm-height: 3.75vh;
+    --em-text: 0.7vw;
+    --em-text-2: 0.8vw;
+    --sm-text: 0.9vw;
+    --sm-text-2: 0.95vw;
+    --md-text: 1vw;
+    --md-text-2: 1.25vw;
+    --md-text-3: 1.5vw;
+    --lg-text: 1.75vw;
+    --lg-text-2: 2vw;
+    --lg-text-3: 2.25vw;
+    --lg-text-4: 2.75vw;
+}
+
+html[theme=dark]{
+    --text-color: rgb(255, 255, 255);
+    --btn-color: rgb(33, 36, 41);
+    --white-color: #fff;
+    --bg-color: rgb(33, 36, 41);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
+    :root{
+        --em-text:1vw;
+        --em-text-2: 1.1vw;
+        --sm-text: 1.25vw;
+        --sm-text-2: 1.3vw;
+        --md-text: 1.5vw;
+        --md-text-2: 1.75vw;
+        --md-text-3: 2vw;
+        --lg-text: 2.25vw;
+        --lg-text-2: 3vw;
+        --lg-text-3: 3.5vw;
+        --lg-text-4: 4.5vw;
+    }
+}
+
+@media only screen and (max-width:767px){
+    :root{
+        --em-text: 3vw;
+        --em-text-2: 3.1vw;
+        --sm-text: 3.25vw;
+        --sm-text-2: 3.5vw;
+        --md-text: 4vw;
+        --md-text-2: 4.5vw;
+        --md-text-3: 5vw;
+        --lg-text: 5.5vw;
+        --lg-text-2: 6vw;
+        --lg-text-3: 6.5vw;
+        --lg-text-4: 7.5vw;
+    }
+}
