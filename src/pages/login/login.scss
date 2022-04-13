@@ -1,0 +1,184 @@
+.login_main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 15vh;
+
+    .bg_{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 65%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0.25;
+
+        picture{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            img{
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .login_wrapper{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        min-height: calc(100vh - 15vh);
+
+        .inner_{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1.5em;
+            padding: 2.5em;
+            border-radius: 1.5em;
+            background-color: var(--secondary-color);
+            box-shadow: 10px 10px 25px var(--bg-color);
+            width: 25vw;
+            overflow: hidden;
+            
+            hr{
+                position: relative;
+                display: block;
+                width: 100%;
+                border-color: var(--bg-color);
+                opacity: 0.25;
+            }
+
+           .title_{
+               position: relative;
+               display: block;
+
+               h2{
+                   position: relative;
+                   display: block;
+                   margin: 0;
+                   font-size: var(--lg-text);
+                   color: var(--primary-color);
+                   font-weight: 600;
+               }
+
+               p{
+                   position: relative;
+                   display: block;
+                   font-size: var(--md-text);
+                   margin: 0.5em 0;
+               }
+           }
+        }
+
+    }
+
+    &.sign_up{
+
+        .bg_{
+            width: 100%;
+        }
+        .login_wrapper{
+            justify-content: center;
+            .inner_{
+                width: 40vw;
+                grid-template-columns: 1fr 1fr;
+
+                .title_{
+                    text-align: center;
+
+                    .register_wrapper{
+                        justify-content: center;
+                    }
+                }
+
+                .title_, .btn_group, .field_.attachment_ {
+                    grid-column: 1/-1;
+                }
+
+                .field_.attachment_{
+                    .placeholder_{
+                        width: 30%;
+                        padding-top: 30%;
+                        margin-inline: auto;
+                        picture{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+
+                            img{
+                                position: relative;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center ;
+                            }
+                        }
+                    }
+                }
+
+                @media only screen and (max-width:767px){
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+
+    .status_icon{
+        position: relative;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        grid-column: 1/-1;
+
+        svg{
+            position: relative;
+            display: block;
+            margin-inline: auto;
+            margin-block: 2.5vw;
+        }
+    }
+}
+
+.forgot_pass_link{
+    position: relative;
+    display: inline-block;
+    color: var(--white-color);
+    font-size: var(--sm-text-2);
+
+    &:hover{
+        color: var(--primary-color);
+    }
+}
+
+.register_wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    p{
+        position: relative;
+        display: block;
+        font-size: var(--sm-text);
+        margin: 0.25em 0;
+
+        a{
+            color: var(--primary-color);
+        }
+        
+    }
+}

@@ -1,0 +1,111 @@
+.field_{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &.full_{
+        grid-column: 1/-1;
+    }
+
+    label{
+        position: relative;
+        display: block;
+        font-size: var(--sm-text);
+        font-weight: 500;
+        margin-bottom: 0.25em;
+        padding: 0 0.5em;
+    }
+
+    input{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 3rem;
+        box-shadow: none;
+        transition: all 0.3s ease;
+        background-color: var(--bg-color);
+        border: none;
+        border-radius: 0.85rem;
+        box-sizing: border-box;
+        padding: 0 0.75em;
+        font-size: var(--sm-text-2);
+        font-weight: 600;
+        border: 1px solid var(--bg-color);
+        font-family: var(--font-family);
+        color: var(--text-color);
+
+        &:focus{
+            outline: none;
+            box-shadow: 0px 0px 5px var(--primary-color);
+        }
+    }
+    
+    &.attachment_{
+
+        .placeholder_{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-top: 100%;
+            border: 5px solid var(--bg-color);
+            margin-top: 0.5em;
+            border-radius: 1em;
+            overflow: hidden;
+
+            input[type=file]{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               opacity: 0;
+               z-index: 1;
+               cursor: pointer;
+            }
+
+            .upload_icon{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+
+                &>div{
+                    display: inline-block;
+                }
+
+                svg{
+                    position: relative;
+                    display: block;
+                    width: 40%;
+                    height: auto;
+                    margin-inline: auto;
+                    path{
+                        fill: var(--bg-color);
+                    }
+                }
+            }
+
+            &[data-loading=true]{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    animation: var(--sklAnim);
+                    z-index: 3;
+                }
+            }
+
+        }
+
+        
+    }
+}

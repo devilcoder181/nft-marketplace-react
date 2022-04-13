@@ -4,8 +4,10 @@ import { UILinkButton } from "../button/button";
 import UINavList from "./nav";
 import UIHeaderSearch from "./navSearch";
 import "./header.scss";
-
+import { useAuthContext } from "../../../store/authContext";
 const UIHeader = ()=> {
+
+    const {isLoggedIn} = useAuthContext();
 
     let navItems = [
         {name: 'Home', id: 'menu1', link: '/'},
@@ -30,7 +32,8 @@ const UIHeader = ()=> {
                         <UIHeaderSearch />
                     </div>
                     <div className="nav_item">
-                        <UILinkButton link="/" title="Connect Wallet" />
+                        {!isLoggedIn && <UILinkButton link="/login" title="Connect Wallet" />}
+                        {isLoggedIn && <UILinkButton link="/dashboard" title="Dashboard" />}
                     </div>
                 </div>
 

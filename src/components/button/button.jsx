@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import "./button.scss";
 
-const UIButton = ({title})=> {
+const UIButton = ({title, triggerClick, disable})=> {
+    
+    const triggerMe = (event)=> {
+        if(triggerClick){
+            triggerClick(event)
+        }
+    }
+
     return (
-        <button className="btn_primary">
+        <button className="btn_primary" disabled={disable} onClick={triggerMe}>
             <span>{title}</span>
         </button>
     )

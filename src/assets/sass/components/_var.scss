@@ -1,12 +1,12 @@
 :root {
     --primary-color: #00f388;
-    --secondary-color: #999999;
-    --third-color: #1c1f33;
+    --secondary-color: #2c2e33;
+    --third-color: #33353a;
     --border-color: #f1f1f1;
-    --text-color: rgb(33, 36, 41);
+    --text-color: rgb(33, 35, 41);
     --white-color: #fff;
-    --nav-color: rgb(33, 36, 41);
-    --btn-color: rgb(33, 36, 41);
+    --nav-color: rgb(33, 35, 41);
+    --btn-color: rgb(33, 35, 41);
     --font-family: 'Poppins', 'Almarai', sans-serif;
     --default-height: 4.5vh;
     --sm-height: 3.75vh;
@@ -21,13 +21,15 @@
     --lg-text-2: 2vw;
     --lg-text-3: 2.25vw;
     --lg-text-4: 2.75vw;
+    --sklAnim: sklLoading 0.3s ease infinite alternate;
 }
 
 html[theme=dark]{
     --text-color: rgb(255, 255, 255);
-    --btn-color: rgb(33, 36, 41);
+    --btn-color: rgb(33, 35, 41);
     --white-color: #fff;
-    --bg-color: rgb(33, 36, 41);
+    --bg-color: rgb(33, 35, 41);
+    --border-color: #494c54;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {

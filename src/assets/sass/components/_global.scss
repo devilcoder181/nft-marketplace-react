@@ -61,3 +61,29 @@ a {
     padding: 0 15px;
     margin: 0 auto;
 }
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-color) var(--primary-color);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 2px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color:  var(--primary-color);
+  }
+
+  
+  @keyframes sklLoading {
+      0%{background-color: var(--secondary-color);}
+      100%{background-color: var(--third-color);}
+  }
